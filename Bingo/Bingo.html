@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devide-width, initial-scale=1, shrinkto-fit=no">
+	<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+	<title>Bingo</title>
+</head>
+<style>
+	body { background-image: url(./fondo.jpg); }
+	header div{ color: green;}
+	p{ color: white }
+	p.nombre{color: white; background-color: green; border-radius; border: 1px solid white}
+</style>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<header class="row justify-content-center">
+					<div class="col">
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<h1>Bingo Digital</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12"><div class="col-8"><p id="hora" class="text-align-center"></p></div></div>
+						</div>
+					</div>
+							
+				</header>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<section>
+					<article class="row justify-content-center">
+						<div class="col-6">
+							<img id="imagen" src="./bola.png" alt="" class="img-fluid col-12">
+						</div>
+					
+						<div class="col-6 align-self-center">
+							<div class="row">
+								<p id="Alumno" class="nombre col-12 " style="font-size: 40px"></p>
+							</div>
+							
+						</div>
+					</article>
+					<br>
+					<br>
+					<article class="row justify-content-center">
+						<div class="col-6">
+							<button class=" btn btn-success btn-lg col-12" type="button" onclick="activar()">Jugar</button>
+						</div>
+						<div class="col">
+							<button class=" btn btn-success btn-lg col-12" type="button" onclick="parar()">Parar</button>
+						</div>
+					</article>
+					</div>
+					<div class="col-6">
+						<article class="row justify-content-end">
+						<div class="col-12">
+							<div class="row justify-content-end">
+								<div class="col-12">
+									<table class="table table-bordered  table-sm" style="color: white; height: 600px;">
+								<thead>
+		        				    <th>Posicion</th>
+		        				    <th>Nombre</th>
+		        				</thead>
+		        				<tr>
+		        				    <td id="P1">1</td>
+		        				    <td id="N1"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P2">2</td>
+		        				    <td id="N2"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P3">3</td>
+		        				    <td id="N3"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P4">4</td>
+		        				    <td id="N4"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P5">5</td>
+		        				    <td id="N5"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P6">6</td>
+		        				    <td id="N6"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P7">7</td>
+		        				    <td id="N7"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P8">8</td>
+		        				    <td id="N8"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P9">9</td>
+		        				    <td id="N9"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P10">10</td>
+		        				    <td id="N10"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P11">11</td>
+		        				    <td id="N11"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P12">12</td>
+		        				    <td id="N12"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P13">13</td>
+		        				    <td id="N13"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P14">14</td>
+		        				    <td id="N14"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P15">15</td>
+		        				    <td id="N15"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P16">16</td>
+		        				    <td id="N16"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P17">17</td>
+		        				    <td id="N17"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P18">18</td>
+		        				    <td id="N18"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P19">19</td>
+		        				    <td id="N19"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P20">20</td>
+		        				    <td id="N20"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P21">21</td>
+		        				    <td id="N21"></td>
+		        				</tr>
+		        				<tr>
+		        				    <td id="P22">22</td>
+		        				    <td id="N22"></td>
+		        				</tr>
+								</div>
+							</div>
+							
+							</table>
+						</div>
+					</article>
+					</div>
+				</div>
+		</section>
+</div>
+	
+	<script>
+        var numeros=["./bola1.png","./bola2.png","./bola3.png","./bola4.png","./bola5.png","./bola6.png","./bola7.png","./bola8.png","./bola9.png","./bola10.png","./bola11.png","./bola12.png","./bola13.png","./bola14.png","./bola15.png","./bola16.png","./bola17.png","./bola18.png","./bola19.png","./bola20.png","./bola21.png","./bola22.png"];
+        var nombres=['Alvaro','Raul','Katerina','Jose_Angel','Carlos','Manuel','Julian','Jose_Manuel','Antonio','Maria','Jacopo','Patricio','Pedro','Alejandro','Jose_Luis','Pablo','Gines','Fran','Ruben','Adrian','Sergio','Damaso'];
+        var myvar;
+        var tiempo=setInterval(mostrarHora, 1000);
+        var valorNumeros;
+        var valorNombres;
+        var indiceNombres;
+        //array que almacena los nombres que van saliendo para no repetirlos
+        var NombresUsados=[];
+        var NumerosUsados=[];
+        var cont=0;
+        //Funcion que inicia el proceso y llama a la funcion cambiar cada 0.2 segundos
+        function activar() {
+            //controlamos que no siga cuando esten todos los nombres repartidos
+            if(NombresUsados.length<nombres.length){
+                myvar=setInterval(cambiar, 200);//indicamos el tiempo entre bola y bola
+            }
+           
+        }
+
+        function cambiar(){
+
+            var indiceNumeros=ObtenerIndiceNumero();
+            indiceNombres=ObtenerIndiceNombre();
+            document.getElementById("imagen").src=numeros[indiceNumeros];
+            document.getElementById("Alumno").innerHTML=nombres[indiceNombres];
+            //Guardamos indice del numero
+            valorNumeros=String(indiceNumeros);
+            //guardamos nombre
+            valorNombres=nombres[indiceNombres];
+            
+        }
+        function ObtenerIndiceNumero() {
+            while (cont==0) {
+                var indiNum=Math.floor(Math.random()*numeros.length);
+                for (let c = 0; c < NumerosUsados.length; c++) {
+                    if (NumerosUsados[c]==indiNum) {
+                        cont=1;
+                    }
+                
+                }
+                if (cont==0) {
+                  return indiNum;  
+                }else{
+                    cont=0;
+                }
+            }
+           
+            
+            
+        }
+        //funcion que nos devuelve un indice que no haya salido todavia
+        function ObtenerIndiceNombre() {
+            while (cont==0) {
+                var indiNom=Math.floor(Math.random()*nombres.length);
+                for (let c = 0; c < NombresUsados.length; c++) {
+                    if (NombresUsados[c]==indiNom) {
+                        cont=1;
+                    }
+                
+                }
+                if (cont==0) {
+                  return indiNom;  
+                }else{
+                    cont=0;
+                }
+            }
+           
+            
+            
+        }
+        
+        function parar() {
+            clearInterval(myvar);
+            
+            //guardamos los numeros y nombres usados para que no se repitan
+            NombresUsados.push(indiceNombres);
+            NumerosUsados.push(valorNumeros);
+            console.log("Nombres: "+NombresUsados);
+            console.log("Numeros: "+NumerosUsados);
+            switch (valorNumeros) {
+                case "0":
+                    document.getElementById("N1").innerHTML=valorNombres;
+                    
+                    break;
+                case "1":
+                    document.getElementById("N2").innerHTML=valorNombres;
+
+                    break;
+                case "2":
+                    document.getElementById("N3").innerHTML=valorNombres;
+                    
+                    break;
+                case "3":
+                    document.getElementById("N4").innerHTML=valorNombres;
+                    
+                    break;
+                case "4":
+                    document.getElementById("N5").innerHTML=valorNombres;
+                    
+                    break;
+                case "5":
+                    document.getElementById("N6").innerHTML=valorNombres;
+                    
+                    break;
+                case "6":
+                    document.getElementById("N7").innerHTML=valorNombres;
+                    
+                    break;
+                case "7":
+                    document.getElementById("N8").innerHTML=valorNombres;
+                    
+                    break;
+                case "8":
+                    document.getElementById("N9").innerHTML=valorNombres;
+                    
+                    break;
+                case "9":
+                    document.getElementById("N10").innerHTML=valorNombres;
+                    
+                    break;
+                case "10":
+                    document.getElementById("N11").innerHTML=valorNombres;
+
+                    break;
+                case "11":
+                    document.getElementById("N12").innerHTML=valorNombres;
+
+                    break;
+                case "12":
+                    document.getElementById("N13").innerHTML=valorNombres;
+                    
+                    break;
+                case "13":
+                    document.getElementById("N14").innerHTML=valorNombres;
+                    
+                    break;
+                case "14":
+                    document.getElementById("N15").innerHTML=valorNombres;
+                    
+                    break;
+                case "15":
+                    document.getElementById("N16").innerHTML=valorNombres;
+                    
+                    break;
+                case "16":
+                    document.getElementById("N17").innerHTML=valorNombres;
+                    
+                    break;
+                case "17":
+                    document.getElementById("N18").innerHTML=valorNombres;
+                    
+                    break;
+                case "18":
+                    document.getElementById("N19").innerHTML=valorNombres;
+                    
+                    break;
+                case "19":
+                    document.getElementById("N20").innerHTML=valorNombres;
+                    
+                    break;
+                case "20":
+                    document.getElementById("N21").innerHTML=valorNombres;
+                    
+                    break;
+                case "21":
+                    document.getElementById("N22").innerHTML=valorNombres;
+                    
+                    break;
+            
+                default:
+                    break;
+            }
+            
+        }
+        function mostrarHora() {
+            //obtenemos la fecha
+            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+			var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+			var f=new Date();
+			var fecha=diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("hora").innerHTML = fecha + t;
+            
+        }
+    </script>
+	
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./bootstrap.min.js"></script>
+</body>
+</html>
